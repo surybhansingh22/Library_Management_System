@@ -1,0 +1,155 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Library_Management_System.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        body {
+            background-image: url("lib2.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            height: 180px;
+            width: 100%;
+            border: 2px solid black;
+        } 
+
+        .auto-style1 {
+            width: 80%;
+        }
+
+        .auto-style3 {
+            text-align: center;
+            color: #0066FF;
+            font-size: x-large;
+        }
+
+        .auto-style4 {
+            height: 42px;
+            width: 245px;
+            margin-left: 80px;
+            text-align: center;
+        }
+
+        .auto-style5 {
+            width: 1327px;
+            height: 83px;
+        }
+
+        .auto-style9 {
+            text-decoration: none;
+        }
+
+        .auto-style11 {
+            border-radius: 15px;
+            width:25px
+        }
+
+        .auto-style180 {
+            text-align: center;
+            color: #000000;
+        }
+        .auto-style190 {
+            color: #000000;
+        }
+        .auto-style196 {
+            height: 42px;
+            width: 246px;
+            text-align: center;
+        }
+        .auto-style198 {
+            width: 89px;
+            text-align: center;
+        }
+        .auto-style199 {
+            height: 41px;
+            width: 245px;
+            margin-left: 80px;
+            text-align: center;
+        }
+        .auto-style202 {
+            height: 41px;
+            width: 246px;
+            text-align: center;
+        }
+        .auto-style210 {
+            height: 41px;
+            width: 245px;
+            text-align: center;
+        }
+        .auto-style211 {
+            height: 42px;
+            width: 245px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header class="auto-style18">
+                <table class="auto-style1" style="margin: 25px auto 0px auto" align="center">
+                    <tr>
+                        <td class="auto-style3"><strong>Library Manangement System</strong></td>
+                    </tr>
+                </table>
+                <div class="auto-style180">
+                    <strong>Librarian :<asp:Label ID="Label1" runat="server" CssClass="auto-style190"></asp:Label>
+                    </strong>
+                <br />
+                </div>
+                <table class="auto-style5" style="margin: 5px auto 0px auto; background-color: #b1c3eb; border-radius: 13px; border: .5px solid black; " align="center">
+                    <tr>
+                        <td class="auto-style199" colspan="1" style="padding: 3px"><strong>
+                            <asp:LinkButton ID="LinkButton1" runat="server" CssClass="auto-style9" ForeColor="#0066FF" PostBackUrl="~/Home1.aspx">Home</asp:LinkButton>
+                        </strong></td>
+                        <td class="auto-style210" colspan="1" style="padding: 3px"><strong>
+                            <asp:LinkButton ID="LinkButton2" runat="server" CssClass="auto-style9" ForeColor="#0066FF" PostBackUrl="~/AddBooks.aspx">Add Book</asp:LinkButton>
+                        </strong></td>
+                        <td class="auto-style210" colspan="1" style="padding: 3px"><strong>
+                            <asp:LinkButton ID="LinkButton3" runat="server" CssClass="auto-style9" ForeColor="#0066FF" PostBackUrl="~/SearchBook.aspx">Search Book</asp:LinkButton>
+                        </strong></td>
+                        <td class="auto-style210" colspan="1" style="padding: 3px"><strong>
+                            <asp:LinkButton ID="LinkButton4" runat="server" CssClass="auto-style9" ForeColor="#0066FF" PostBackUrl="~/AllBooks.aspx">All Book</asp:LinkButton>
+                        </strong></td>
+                        <td class="auto-style202" style="padding: 3px"><strong>
+                            <asp:LinkButton ID="LinkButton9" runat="server" CssClass="auto-style9" ForeColor="#0066FF" PostBackUrl="~/BookIssue.aspx" >Issue Section</asp:LinkButton>
+                        </strong></td>
+                        <td class="auto-style198" style="padding: 3px" rowspan="2">
+                            <asp:ImageButton ID="ImageButton1" runat="server" BackColor="White" CssClass="auto-style11" BorderColor="#9AD0F4" BorderStyle="Double" BorderWidth="1px" Height="25px" ImageUrl="~/logout.png" ToolTip="Log Out" PostBackUrl="~/Login.aspx" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style4" colspan="1" style="padding: 3px"><strong>
+                            <asp:LinkButton ID="LinkButton8" runat="server" CssClass="auto-style9" ForeColor="#0066FF" PostBackUrl="~/AddAdmin1.aspx">Add Admin</asp:LinkButton>
+                        </strong></td>
+                        <td class="auto-style211" colspan="1" style="padding: 3px"><strong>
+                            <asp:LinkButton ID="LinkButton5" runat="server" CssClass="auto-style9" ForeColor="#0066FF" PostBackUrl="~/AddStudent1.aspx">Register Student</asp:LinkButton>
+                        </strong></td>
+                        <td class="auto-style211" colspan="1" style="padding: 3px"><strong>
+                            <asp:LinkButton ID="LinkButton6" runat="server" CssClass="auto-style9" ForeColor="#0066FF" PostBackUrl="~/SearchStudent.aspx">Search Student</asp:LinkButton>
+                        </strong></td>
+                        <td class="auto-style211" colspan="1" style="padding: 3px"><strong>
+                            <asp:LinkButton ID="LinkButton7" runat="server" CssClass="auto-style9" ForeColor="#0066FF" PostBackUrl="~/AllStudent1.aspx">All Student</asp:LinkButton>
+                        </strong></td>
+                        <td class="auto-style196" style="padding: 3px"><strong>
+                            <asp:LinkButton ID="LinkButton10" runat="server" CssClass="auto-style9" ForeColor="#0066FF" PostBackUrl="~/BookRequest.aspx" >Book Request</asp:LinkButton>
+                        </strong></td>
+                    </tr>
+                </table>
+
+            </header>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

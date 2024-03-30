@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Student.master.cs" Inherits="Library_Management_System.Student" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        body {
+            background-image: url("lib2.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            height: 150px;
+            width: 100%;
+            border: 2px solid black:
+        }
+
+        .auto-style1 {
+            width: 80%;
+        }
+
+        .auto-style3 {
+            text-align: center;
+            color: #0066FF;
+            font-size: x-large;
+        }
+
+        .auto-style4 {
+            height: 25px;
+            width: 153px;
+            margin-left: 80px;
+            text-align: center;
+        }
+
+        .auto-style5 {
+            width: 890px;
+        }
+
+        .auto-style8 {
+            height: 25px;
+            width: 154px;
+            text-align: center;
+        }
+
+        .auto-style9 {
+            text-decoration: none;
+        }
+    
+        .auto-style11 {
+            border-radius: 15px;
+            width:25px
+        }
+
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header>
+                <table class="auto-style1" style="margin: 25px auto 0px auto" align="center">
+                    <tr>
+                        <td class="auto-style3"><strong>Library Manangement System</strong></td>
+                    </tr>
+                </table>
+                <br />
+                <table class="auto-style5" style="margin: 30px auto 0px auto; background-color: #b1c3eb; border-radius: 13px; border: .5px solid black;" align="center">
+                    <tr>
+                        <td class="auto-style4"><strong>
+                            <asp:LinkButton ID="LinkButton1" runat="server" CssClass="auto-style9" ForeColor="#0066FF" PostBackUrl="~/Home2.aspx">Home</asp:LinkButton>
+                        </strong></td>
+                        <td class="auto-style8"><strong>
+                            <asp:LinkButton ID="LinkButton3" runat="server" CssClass="auto-style9" ForeColor="#0066FF" PostBackUrl="~/SearchBook2.aspx">Search Book</asp:LinkButton>
+                        </strong></td>
+                        <td class="auto-style8"><strong>
+                            <asp:LinkButton ID="LinkButton4" runat="server" CssClass="auto-style9" ForeColor="#0066FF" PostBackUrl="~/AllBooks2.aspx">All Book</asp:LinkButton>
+                        </strong></td>
+                        <td class="auto-style8"><strong>
+                            <asp:LinkButton ID="LinkButton2" runat="server" CssClass="auto-style9" ForeColor="#0066FF" PostBackUrl="~/MyBooks.aspx" >My Issued Book</asp:LinkButton>
+                        </strong></td>
+                        <td class="auto-style8"><strong>
+                            <asp:LinkButton ID="LinkButton5" runat="server" CssClass="auto-style9" ForeColor="#0066FF" PostBackUrl="~/NewBookReq.aspx" >New Book Request</asp:LinkButton>
+                        </strong></td>
+                        <td class="auto-style8"><strong>
+                            <asp:LinkButton ID="LinkButton6" runat="server" CssClass="auto-style9" ForeColor="#0066FF" PostBackUrl="~/RequestStatus.aspx" >Request Status</asp:LinkButton>
+                        </strong></td>
+                        <td class="auto-style8">
+                            <asp:ImageButton ID="ImageButton1" runat="server" BackColor="White" CssClass="auto-style11" BorderColor="#9AD0F4" BorderStyle="Double" BorderWidth="1px" Height="25px" ImageUrl="~/logout.png" ToolTip="Log Out" PostBackUrl="~/Login.aspx" />
+                        </td>
+                    </tr>
+                </table>
+
+            </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
